@@ -1,0 +1,18 @@
+[package]
+name = "nflog-source"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+byteorder = "1.4.3"
+chrono = { version = "0.4", features = ["serde"] }
+libc = "0.2.99"
+tokio-nflog = { git = "https://github.com/zshell31/tokio-nflog.git", features = ["serde"] }
+pnet_packet = "0.28.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_with = "1.0"
+tokio = { version = "1", features = ["full"] }
